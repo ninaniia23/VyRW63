@@ -40,6 +40,10 @@ public class Program {
 		department2.id = 2;
 		department2.name = "Marketing";
 
+		Department department3 = new Department();
+		department3.id = 3;
+		department3.name = "Test";
+
 		System.out.println("Thông tin phòng ban số 1:");
 		System.out.println("Id:" + department1.id);
 		System.out.println("Name:" + department1.name);
@@ -151,7 +155,7 @@ public class Program {
 		group1.creator = account1;
 		group1.createDate = LocalDate.now();
 		Account[] group1Accounts = { account1, account2 };
-//		group1.accounts = group1Accounts;//null  group1.accounts = null;   null.lenght  loi
+		group1.accounts = group1Accounts;// null group1.accounts = null; null.lenght loi
 
 //		Account[] acc = {}; // ko co gi
 //		group1.accounts = group1Accounts;// rong  group1.accounts = {}// koco ptu nao .lenght =0
@@ -199,7 +203,7 @@ public class Program {
 
 		Group[] account2Groups = new Group[1];
 		account2Groups[0] = group1;
-		// account2.groups = account2Groups;
+		account2.groups = account2Groups;
 
 		Group[] account3Groups = new Group[1];
 		account3Groups[0] = group2;
@@ -344,15 +348,15 @@ public class Program {
 		// if else
 		// Question1
 		System.out.println("----------------------------------");
-		System.out.println("Kiểm tra Account thứ 2");
+		System.out.println("QUESTION 1: Kiểm tra Account thứ 2");
 		if (account2.department == null) {
 			System.out.println(" Nhân viên này chưa có phòng ban");
 		} else {
-			System.out.println("Phòng ban của nhân viên này là" + account2.department.name);
+			System.out.println("Phòng ban của nhân viên này là " + account2.department.name);
 		}
 		// Question2
 		System.out.println("----------------------------------");
-		System.out.println("Question 2");
+		System.out.println("Question 2:Kiểm tra account thứ 2");
 		if (account2.groups == null) {
 			System.out.println(" Nhân viên này chưa tham gia group nào");
 
@@ -369,16 +373,26 @@ public class Program {
 			}
 
 		}
+		// Question 3:
+		System.out.println("----------------------------------");
+		System.out.println("QUESTION 3: Dùng ternary để làm question 1");
+		System.out.println(account2.department == null ? " Nhân viên này chưa có phòng ban "
+				: "Phòng ban của nhân viên này là" + account2.department.name);
+		// Question 4:
+		System.out.println("----------------------------------");
+		System.out.println("QUESTION 4: Dùng ternary");
+		System.out.println(
+				account1.position.name.toString() == "Dev" ? "Đây là Developer" : "Người này không phải là Developer");
 		// Question 5:
 		// đếm số lượng account trong group1
-		System.out.println("````````````````````````");
+		System.out.println("----------------------------------");
 		System.out.println("Question 5");
 		int countAccountInGroup1 = group1.accounts.length;// null.length sai
 
 		if (group1.accounts == null) {
 			System.out.println("Nhóm chưa có thành viên");
 		} else {
-			switch (group1.accounts.length) {
+			switch (countAccountInGroup1) {
 			case 1:
 				System.out.println("Nhóm có 1 thành viên");
 				break;
@@ -396,9 +410,102 @@ public class Program {
 				break;
 			}
 		}
+		// Question 6:
+		System.out.println("----------------------------------");
+		System.out.println("Question 6");
+		int CountGroupOfAccount2 = account2.groups.length;
+		if (account2.groups == null) {
+			System.out.println("Nhân viên này chưa có group");
+		} else {
+			switch (CountGroupOfAccount2) {
+			case 1:
+				System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+				break;
+			case 2:
+				System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+				break;
+			case 3:
+				System.out.println("Nhân viên này là người quan trọng, tham gia nhiều group");
+				break;
 
-		System.out.println("vy");
-		System.out.println("vy vy");
+			default:
+				System.out.println("Nhân viên này là người hóng chuyện, tham gia tất cả các group");
+				break;
+			}
 
+		}
+		// Question 7
+		System.out.println("----------------------------------");
+		System.out.println("Question 7");
+		if (account1.position.name == null) {
+			System.out.println("Nhân viên chưa có vị trí");
+		} else {
+			String positionName = account1.position.name.toString();
+			switch (positionName) {
+			case "Dev":
+				System.out.println("Đây là Developer");
+				break;
+			default:
+				System.out.println("Người này không phải là Developer");
+				break;
+
+			}
+		}
+		// Question 8
+		System.out.println("----------------------------------");
+		System.out.println("Question 8");
+		Account[] accArray = { account1, account2, account3 };
+		for (Account account : accArray) {
+			System.out.println("AccountID: " + account.id + " Email: " + account.email + " Name: " + account.fullName);
+		}
+		// Question 9:
+		System.out.println("----------------------------------");
+		System.out.println("Question 9");
+		Department[] DepArray = { department1, department2 };
+		for (Department department : DepArray) {
+			System.out.println("DepartmentID: " + department.id + " Name: " + department.name);
+		}
+		// Question 10:
+		System.out.println("----------------------------------");
+		System.out.println("Question 10");
+		Account[] acc1 = { account1, account2, account3, account4 };
+		for (int i = 0; i <= acc1.length - 1; i++) {
+			System.out.println("Thông tin account thứ " + (i + 1) + " là:");
+			System.out.println("Email: " + acc1[i].email);
+			System.out.println("Full Name: " + acc1[i].fullName);
+			System.out.println("Department " + acc1[i].department.name);
+		}
+		// Question 11:
+		System.out.println("----------------------------------");
+		System.out.println("Question 11");
+		Department[] dep1 = { department1, department2 };
+		for (int i = 0; i <= dep1.length - 1; i++) {
+			System.out.println("Thông tin phòng ban thứ " + (i + 1) + " là:");
+			System.out.println("Id: " + dep1[i].id);
+			System.out.println("Name: " + dep1[i].name);
+		}
+		// Question 12:
+		System.out.println("----------------------------------");
+		System.out.println("Question 12");
+		Department[] dep2 = { department1, department2, department3 };
+		for (int i = 0; i < 2; i++) {
+			System.out.println("Thông tin phòng ban thứ " + (i + 1) + " là:");
+			System.out.println("Id: " + dep2[i].id);
+			System.out.println("Name: " + dep2[i].name);
+		}
+		// Question 13:
+		System.out.println("----------------------------------");
+		System.out.println("Question 13");
+		Account[] acc2 = { account1, account2, account3, account4 };
+		for (int i = 0; i <= acc1.length - 1; i++) {
+			if (i != 1) {
+				System.out.println("Thông tin account thứ " + (i + 1) + " là:");
+				System.out.println("Email: " + acc1[i].email);
+				System.out.println("Full Name: " + acc1[i].fullName);
+				System.out.println("Department " + acc1[i].department.name);
+			}
+
+		}
+		// Question 14:
 	}
 }
