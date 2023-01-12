@@ -1,6 +1,8 @@
 package com.java.frontend;
 
 import java.time.LocalDate;
+import java.util.Locale;
+import java.util.Scanner;
 
 import com.java.entity.Account;
 import com.java.entity.Answer;
@@ -507,5 +509,168 @@ public class Program {
 
 		}
 		// Question 14:
+		// WHILE
+		// DO_WHILE
+		// Continue -Break
+		System.out.println("---------Demo Input------------");
+		Scanner scanner = new Scanner(System.in);
+		// Question 16
+		System.out.println("----------------------------------");
+		System.out.println("Question 16");
+		System.out.println("Làm lại câu 10 bằng lệnh While");
+		Account[] acc3 = { account1, account2, account3, account4 };
+		int i = 0;
+		while (i < acc3.length) {
+			System.out.println("Thông tin account thứ " + (i + 1) + " là:");
+			System.out.println("Email: " + acc1[i].email);
+			System.out.println("Full Name: " + acc1[i].fullName);
+			System.out.println("Department " + acc1[i].department.name);
+			i++;
+		}
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 11 bằng lệnh While");
+		Department[] dep3 = { department1, department2 };
+		int j = 0;
+		while (j < dep3.length) {
+			System.out.println("Thông tin phòng ban thứ " + (j + 1) + " là:");
+			System.out.println("Id: " + dep3[j].id);
+			System.out.println("Name: " + dep3[j].name);
+			j++;
+		}
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 12 bằng lệnh While");
+		Department[] dep4 = { department1, department2, department3 };
+		int i1 = 0;
+		while (i1 < 2) {
+			System.out.println("Thông tin phòng ban thứ " + (i1 + 1) + " là:");
+			System.out.println("Id: " + dep4[i1].id);
+			System.out.println("Name: " + dep4[i1].name);
+			i1++;
+			//////
+			System.out.println("----------------------------------");
+			System.out.println("Làm lại câu 13 bằng lệnh While");
+			Account[] acc4 = { account1, account2, account3, account4 };
+			int k = 0;
+			while (k < acc4.length) {
+				if (k != 1) {
+					System.out.println("Thông tin account thứ " + (k + 1) + " là:");
+					System.out.println("Email: " + acc4[k].email);
+					System.out.println("Full Name: " + acc4[k].fullName);
+					System.out.println("Department " + acc4[k].department.name);
+				}
+				k++;
+			}
+		}
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 14 bằng lệnh While");
+		Account[] acc5 = { account1, account2, account3, account4 };
+		int i3 = 0;
+		while (i3 < acc5.length) {
+			if (acc5[i3].id < 4) {
+				System.out.println("Thông tin account thứ " + (i3 + 1) + " là:");
+				System.out.println("Email: " + acc5[i3].email);
+				System.out.println("Full name: " + acc5[i3].fullName);
+				System.out.println("Phòng ban: " + acc5[i3].department.name);
+			}
+			i3++;
+		}
+		// Question 15 :In ra các số chẵn nhỏ hơn hoặc bằng 20
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 15 bằng lệnh While");
+		int i4 = 1;
+		while (i4 <= 20) {
+			if (i4 % 2 == 0) {
+				System.out.println(i4 + " ");
+			}
+			i4++;
+		}
+		// Question 17:
+		System.out.println("----------------------------------");
+		System.out.println("Question 17");
+		System.out.println("Làm lại câu 10 bằng lệnh do-while");
+		Account[] accArray1 = { account1, account2, account3, account4 };
+		int l = 0;
+		do {
+			System.out.println("Thông tin account thứ " + (l + 1) + " là:");
+
+			System.out.println("Email: " + accArray1[l].email);
+			System.out.println("Full Name: " + accArray1[l].fullName);
+			System.out.println("Department " + accArray1[l].department.name);
+			l++;
+		} while (l < accArray1.length);
+
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 11 bằng lệnh do-while");
+		Department[] depArray = { department1, department2 };
+		int m = 0;
+		do {
+			System.out.println("Thông tin phòng ban thứ " + (m + 1) + " là:");
+			System.out.println("Id: " + depArray[m].id);
+			System.out.println("Name: " + dep3[m].name);
+			m++;
+		} while (m < depArray.length);
+
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 12 bằng lệnh do-while");
+		Department[] depArray1 = { department1, department2, department3 };
+		int n = 0;
+		do {
+			System.out.println("Thông tin phòng ban thứ " + (n + 1) + " là:");
+			System.out.println("Id: " + depArray1[n].id);
+			System.out.println("Name: " + depArray1[n].name);
+			n++;
+		} while (n < 2);
+
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 13 bằng lệnh do-while");
+		Account[] accArray3 = { account1, account2, account3, account4 };
+		int h = 0;
+		do {
+			if (h != 1) {
+				System.out.println("Thông tin account thứ " + (h + 1) + " là:");
+				System.out.println("Email: " + accArray3[h].email);
+				System.out.println("Full Name: " + accArray3[h].fullName);
+				System.out.println("Department " + accArray3[h].department.name);
+			}
+			h++;
+		} while (h < accArray3.length);
+
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 14 bằng lệnh do-while");
+		Account[] accArray4 = { account1, account2, account3, account4 };
+		int u = 0;
+		do {
+			if (accArray4[u].id < 4) {
+				System.out.println("Thông tin account thứ " + (u + 1) + " là:");
+				System.out.println("Email: " + accArray4[u].email);
+				System.out.println("Full name: " + accArray4[u].fullName);
+				System.out.println("Phòng ban: " + accArray4[u].department.name);
+			}
+			u++;
+		} while (u < accArray4.length);
+		System.out.println("----------------------------------");
+		System.out.println("Làm lại câu 15 bằng lệnh Do- While");
+		int i5 = 1;
+		do {
+			if (i5 % 2 == 0) {
+				System.out.println(i5 + " ");
+			}
+			i5++;
+
+		} while (i5 <= 20);
+
+		// Exercise 2
+		// Question 1:
+		System.out.println("----------------------------------");
+		System.out.println("EXCERCISE 2:System out printf");
+		System.out.println("Question 1");
+		int a = 5;
+		System.out.println(a);
+		// Question 2:
+		System.out.println("----------------------------------");
+		System.out.println("Question 2");
+		int b = 100000000;
+		System.out.printf(Locale.US, "%,d%n", b);
 	}
+
 }
