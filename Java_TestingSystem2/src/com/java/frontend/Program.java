@@ -723,6 +723,12 @@ public class Program {
 	}
 
 	public static void question5() {
+//	String pattern = "MM-dd";
+//	simpleDateFormat = new SimpleDateFormat(pattern);
+//	for (Exam exam : exams) {
+//		date = simpleDateFormat.format(exam.createDate);
+//		System.out.println(exam.code + ": " + date);
+//	}
 
 	}
 
