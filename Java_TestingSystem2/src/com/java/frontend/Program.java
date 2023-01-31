@@ -660,17 +660,74 @@ public class Program {
 		} while (i5 <= 20);
 
 		// Exercise 2
-		// Question 1:
-		System.out.println("----------------------------------");
-		System.out.println("EXCERCISE 2:System out printf");
-		System.out.println("Question 1");
+		// Làm theo 1 menu
+		Scanner scanner3 = new Scanner(System.in);
+		while (true) {
+			System.out.println("+-----------------Menu Exercise 2-------------------+");
+			System.out.println("+---------------------------------------------------+");
+			System.out.printf("|%-51s|%n", "Mời bạn chọn question muốn làm");
+			System.out.printf("|%-51s|%n", "1.Question 1                        ");
+			System.out.printf("|%-51s|%n", "2.Question 2                 ");
+			System.out.printf("|%-51s|%n", "3.Question 3                 ");
+			System.out.printf("|%-51s|%n", "4.Question 4                 ");
+			System.out.printf("|%-51s|%n", "5.Question 5                 ");
+			System.out.printf("|%-51s|%n", "6.Question 6                 ");
+			System.out.println("+---------------------------------------------------+");
+
+			int chooseMenu = scanner3.nextInt();
+			switch (chooseMenu) {
+			case 1:
+				question1();
+				break;
+			case 2:
+				question2();
+				break;
+			case 3:
+				question3();
+				break;
+			case 4:
+				question4();
+				break;
+			case 5:
+
+				break;
+			case 6:
+
+				break;
+			default:
+				System.out.println("Bạn chọn chưa đúng!!!");
+				break;
+			}
+		}
+
+	}
+
+	public static void question1() {
 		int a = 5;
 		System.out.println(a);
-		// Question 2:
-		System.out.println("----------------------------------");
-		System.out.println("Question 2");
+	}
+
+	public static void question2() {
 		int b = 100000000;
 		System.out.printf(Locale.US, "%,d%n", b);
+	}
+
+	public static void question3() {
+		float c = 5.567098f;
+		System.out.printf("%5.4f%n", c);
+	}
+
+	public static void question4() {
+		String name = " Nguyễn Văn A";
+		System.out.printf("Tên tôi là: " + name + " và tôi đang độc thân%n");
+	}
+
+	public static void question5() {
+
+	}
+
+	public static void question6() {
+
 	}
 
 }
