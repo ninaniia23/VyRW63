@@ -38,8 +38,8 @@ public class Account {
 		this.createDate = LocalDate.now();
 	}
 
-	// Có các parameter là id, Email, Username, FirstName,
-	// LastName (với FullName = FirstName + LastName) và
+	// Có các parameter là id, Email, Username, FirstName LastName (với FullName =
+	// FirstName + LastName) và
 	// Position của User, createDate
 
 	public Account(int id, String email, String username, String fullname, String firstName, String lastName,
@@ -51,13 +51,46 @@ public class Account {
 		this.position = position;
 		this.createDate = createDate;
 
-		//
+	}
+
+	// khởi tạo getter
+	public int getId() {
+		return id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getUsername() {
+		return username;
 
 	}
 
-//	public String toString() {
-//		return "id: " + id + "   ,email: " + email + "     ,username: " + username + "    ,fullname: " + fullname
-//				+ "     ,positionid:   " + position;
-//	}
+	public String getFullname() {
+		return fullname;
+	}
+
+	// Khởi tạo Setter
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+
+	public String toString() {
+		return "id: " + id + "   ,email: " + email + "     ,username: " + username + "    ,fullname: " + fullname
+				+ "     ,positionid:   " + position;
+	}
 
 }
