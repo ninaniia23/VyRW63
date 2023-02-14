@@ -5,8 +5,18 @@ public class Staff {
 	private String name;
 	private String gender;
 
+	public Staff() {
+
+	}
+
+	public Staff(int id, String name, String gender) {
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+	}
+
 	// Khai báo Setter
-	public void setId(int Id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -30,5 +40,12 @@ public class Staff {
 
 	public String getGender() {
 		return this.gender;
+	}
+
+	// Khai báo tên phương thức trừu tượng
+	// public abstract void gotoVTI();
+
+	public void showInfo() {
+		System.out.println("THis is showInfo of Method Staff Super");
 	}
 }
